@@ -1,0 +1,11 @@
+
+h1 {
+    color: rgb(242, 242, 250); /* Define a cor para todos os <h1> */
+}
+
+body {
+    background-image: url('../images/pexels-pixabay-76969.jpg');
+    background-size: cover; /* A imagem cobrirá toda a área */
+    background-position: top; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
