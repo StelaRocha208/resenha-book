@@ -19,6 +19,6 @@
     - `index.html`: Página inicial do projeto. 
     - `atividade-5.html`: Página da atividade 5. 
 
-**Paleta de cores/**
+**Paleta de cores**
 
 ![Paleta de cores](../atividade%205/infraestructure/assets/images/AdobeColor-My%20Color%20Theme.jpeg)
