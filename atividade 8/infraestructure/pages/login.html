@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ResenhaBook</title>
+    <link rel="shortcut icon" href="../assets/images/Martz90-Circle-Books.512.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/elements.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>ResenhaBook</h1>
+        <p>Faça login ou cadastre-se para acessar nossa comunidade</p>
+    </header>
+
+    <!-- Container dos formulários de login e cadastro -->
+    <div class="form-container">
+
+        <!-- Radio Buttons para alternar entre Login e Cadastro -->
+        <input type="radio" name="toggle" id="login" checked hidden>
+        <input type="radio" name="toggle" id="register" hidden>
+
+        <!-- Formulário de Login -->
+        <form id="login-form" action="admin.html" method="get" class="form-content">
+            <h2>Entrar</h2>
+            <label for="username">Usuário ou E-mail:</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário ou e-mail" required>
+        
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        
+            <button type="submit">Login</button>
+
+            <!-- Botão para alternar para o formulário de Cadastro -->
+            <label for="register" class="btn-switch">Cadastre-se</label>
+        </form>
+
+        <!-- Formulário de Cadastro -->
+        <form id="register-form" class="form-content">
+            <h2>Cadastre-se</h2>
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Digite seu nome" required>
+
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Digite seu sobrenome" required>
+            
+            <label for="birthDay">Data de Nascimento:</label>
+            <div style="display: flex; gap: 10px;">
+               <input type="number" id="birthDay" name="birthDay" placeholder="Dia" min="1" max="31" required style="width: 70px;">
+               <input type="number" id="birthMonth" name="birthMonth" placeholder="Mês" min="1" max="12" required style="width: 70px;">
+               <input type="number" id="birthYear" name="birthYear" placeholder="Ano" min="1900" max="2024" required style="width: 90px;">
+            </div>
+            
+            <label for="registerEmail">E-mail:</label>
+            <input type="email" id="registerEmail" name="registerEmail" placeholder="Digite seu e-mail" required>
+
+            <label for="registerPassword">Senha:</label>
+            <input type="password" id="registerPassword" name="registerPassword" placeholder="Crie uma senha" required>
+
+            <button type="submit">Cadastrar</button>
+
+            <!-- Botão para alternar para o formulário de Login -->
+            <label for="login" class="btn-switch">Já tenho uma conta</label>
+        </form>
+    </div>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>© 2024 ResenhaBook - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
