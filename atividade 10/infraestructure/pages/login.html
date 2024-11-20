@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ResenhaBook</title>
+    <link rel="shortcut icon" href="../assets/images/Martz90-Circle-Books.512.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"> <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/css/elements.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <!-- Cabeçalho do site -->
+    <header class="custom-header text-center py-4 text-white">
+        <h1>ResenhaBook</h1>
+        <p>Faça login ou cadastre-se para acessar nossa comunidade</p>
+    </header>
+
+    <!-- Container dos formulários de login e cadastro -->
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 400px;">
+            <div class="card-body">
+
+                <!-- Radio Buttons para alternar entre Login e Cadastro -->
+                <input type="radio" name="toggle" id="login" checked hidden>
+                <input type="radio" name="toggle" id="register" hidden>
+
+                <!-- Formulário de Login -->
+                <form id="login-form" action="admin.html" method="get" class="form-content">
+                    <h2 class="text-center text-danger">Entrar</h2>
+                    <div>
+                        <label for="username" class="form-label">Usuário ou E-mail:</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Digite seu usuário ou e-mail" required>
+                    </div>
+                    <div>
+                        <label for="password" class="form-label">Senha:</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Login</button>
+
+                    <!-- Botão para alternar para o formulário de Cadastro -->
+                    <label for="register" class="btn btn-warning w-100 mt-3">Cadastre-se</label>
+                </form>
+
+                <!-- Formulário de Cadastro -->
+                <form id="register-form" class="form-content">
+                    <h2 class="text-center text-danger">Cadastre-se</h2>
+                    <div>
+                        <label for="firstName" class="form-label">Nome:</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Digite seu nome" required>
+                    </div>
+                    <div>
+                        <label for="lastName" class="form-label">Sobrenome:</label>
+                        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div>
+                        <label for="birthDay" class="form-label">Data de Nascimento:</label>
+                        <div class="d-flex gap-2">
+                            <input type="number" id="birthDay" name="birthDay" class="form-control" placeholder="Dia" min="1" max="31" required>
+                            <input type="number" id="birthMonth" name="birthMonth" class="form-control" placeholder="Mês" min="1" max="12" required>
+                            <input type="number" id="birthYear" name="birthYear" class="form-control" placeholder="Ano" min="1900" max="2024" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="registerEmail" class="form-label">E-mail:</label>
+                        <input type="email" id="registerEmail" name="registerEmail" class="form-control" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div>
+                        <label for="registerPassword" class="form-label">Senha:</label>
+                        <input type="password" id="registerPassword" name="registerPassword" class="form-control" placeholder="Crie uma senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Cadastrar</button>
+
+                    <!-- Botão para alternar para o formulário de Login -->
+                    <label for="login" class="btn btn-warning w-100 mt-3">Já tenho uma conta</label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé do site -->
+    <footer class="custom-footer text-center py-3 text-white mt-4">
+        <p>© 2024 ResenhaBook - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

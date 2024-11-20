@@ -1,0 +1,241 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF3E0; 
+    color: #333333; 
+}
+
+header {
+    background-color: #8B0000;
+    color: #FAF3E0; 
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: #B22222; 
+    color: #FAF3E0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+nav a {
+    color: #FAF3E0;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFD700; 
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Coluna única para dispositivos móveis */
+    gap: 1em;
+    padding: 1em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+article {
+    background-color: #FFF5EE; 
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #8B0000; 
+}
+
+aside {
+    background-color: #FAF3E0; 
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #8B0000; 
+    color: #FAF3E0;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Ajuste de layout para artigos e aside */
+main > section > article:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main > section > article:last-of-type aside {
+    flex: 1;
+}
+
+/* Ajustes de botão ou links */
+button, .btn {
+    background-color: #C53030; 
+    color: #FAF3E0; 
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background-color: #FFD700; 
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas entre 600px e 1024px */
+@media (min-width: 600px) {
+    main {
+        flex-direction: row; /* Duas colunas: conteúdo e aside */
+    }
+    nav {
+        font-size: 0.9em;
+    }
+}
+
+/* Telas entre 768px e 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 1em;
+    }
+    nav {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0.5em;
+        display: inline-block;
+    }
+    main {
+        flex-direction: row; /* Duas colunas */
+    }
+    aside {
+        padding: 1em;
+    }
+}
+
+/* Telas maiores que 1024px */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px; /* Aumenta a fonte para telas maiores */
+    }
+
+    main {
+        flex-direction: row; /* Layout em 3 colunas */
+        padding: 2em;
+    }
+
+    article {
+        padding: 1.5em;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+
+    button, .btn {
+        padding: 0.6em 1.2em;
+    }
+}
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+    nav {
+        padding: 0.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0.5em;
+        display: block;
+    }
+    main {
+        flex-direction: column; /* Coluna única */
+        padding: 0.5em;
+    }
+    article, aside {
+        padding: 0.5em;
+    }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    main {
+        padding: 0.5em;
+    }
+    article h2 {
+        font-size: 1.2em;
+    }
+    aside {
+        padding: 0.5em;
+    }
+    button, .btn {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+    }
+}
+
+header.custom-header {
+    padding: 0.5em 0;
+    background-color: #8B0000;
+    color: #FAF3E0;
+}
+
+/* Barra de Navegação */
+.custom-navbar {
+    padding: 0.5em;
+    background-color: #B22222; /* Vermelho médio */
+    color: #FAF3E0;
+}
+
+.custom-navbar .navbar-brand, 
+.custom-navbar .nav-link {
+    color: #FAF3E0; /* Texto claro */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #FFD700; /* Dourado */
+}
+
+/* Rodapé */
+.custom-footer {
+    background-color: #8B0000; /* Vermelho escuro */
+    color: #FAF3E0; /* Texto claro */
+}
+
+.custom-footer a {
+    color: #FAF3E0;
+}
+
+.custom-footer a:hover {
+    color: #FFD700; /* Dourado */
+}

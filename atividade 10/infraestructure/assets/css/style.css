@@ -1,0 +1,167 @@
+/* Estilos para o container dos formulários */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FFF5EE;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilos para os formulários */
+form {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mostrar e esconder os formulários com base nos radio buttons */
+#login:checked ~ #login-form, #register:checked ~ #register-form {
+    display: block;
+}
+
+form h2 {
+    text-align: center;
+    color: #8B0000;
+    margin-bottom: 1.5em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333333;
+}
+
+form input {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #C53030;
+    color: #FAF3E0;
+    border: none;
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+form button:hover {
+    background-color: #8B0000;
+}
+
+/* Estilos para o botão "Cadastre-se" */
+.btn-switch {
+    background-color: #FFD700;
+    color: #333333;
+    border: none;
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-switch:hover {
+    background-color: #C53030;
+    color: #FAF3E0;
+}
+
+
+
+
+
+
+/* Estilos para a tabela */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 5px solid #8B0000;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #8B0000;
+    text-align: center; /* Centralizar texto em todas as colunas */
+}
+
+th {
+    background-color: #8B0000;
+    color: #FAF3E0;
+}
+
+/* Estilos para os botões com ícones */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaço entre os botões */
+    height: 100%; /* Ocupa a altura da célula */
+}
+
+.btn-action {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Margens automáticas à esquerda */
+    margin-right: auto; /* Margens automáticas à direita */
+    padding: 10px 20px; /* Exemplo de estilo para o botão */
+}
+
+.btn-action img {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+    vertical-align: middle;
+    
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo do botão de cadastro */
+.button-container {
+    text-align: center; /* Alinha o botão ao centro */
+    margin-bottom: 20px; /* Espaço entre o botão e a tabela */
+}
+
+.btn-cadastro {
+    background-color: #FFD700; 
+    color: white; 
+    border: none; 
+    padding: 12px 30px;
+    font-size: 18px; 
+    font-weight: bold; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 10px auto 10px auto;
+    text-align: center; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-cadastro:hover {
+    background-color: #B22222; 
+    transform: scale(1.0); 
+}
+
+.btn-icon {
+    width: 24px; 
+    height: 24px;
+}
