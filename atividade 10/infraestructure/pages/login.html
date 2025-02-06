@@ -29,7 +29,7 @@
                 <input type="radio" name="toggle" id="register" hidden>
 
                 <!-- Formulário de Login -->
-                <form id="login-form" action="admin.html" method="get" class="form-content">
+                <form id="login-form" class="form-content">
                     <h2 class="text-center text-danger">Entrar</h2>
                     <div>
                         <label for="username" class="form-label">Usuário ou E-mail:</label>
@@ -87,8 +87,51 @@
     </footer>
 
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    const apiUrl = "http://localhost:8080/auth/login"; // URL da API de login
+
+    document.getElementById("login-form").addEventListener("submit", async function (event) {
+        event.preventDefault(); // Impede recarregamento da página
+
+        const email = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (!email || !password) {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password }) // Envia os dados de login
+            });
+
+            if (!response.ok) {
+                alert("Usuário ou senha incorretos!");
+                return;
+            }
+
+            const data = await response.json();
+            
+            // Verifica se a API retorna um token de autenticação
+            if (data.token) {
+                localStorage.setItem("authToken", data.token); // Salva o token no navegador
+                window.location.href = "admin.html"; // Redireciona para a página admin
+            } else {
+                alert("Erro ao autenticar. Tente novamente.");
+            }
+
+        } catch (error) {
+            console.error("Erro ao fazer login:", error);
+        }
+    });
+    </script>
 </body>
 </html>
+
 
 
 
